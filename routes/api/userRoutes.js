@@ -29,11 +29,11 @@ const {
     deleteFriend
 } = require("../../controllers/user-controller.js");
 
-router.route('/').get(getUsers).post(createUsers);
+router.route('/').get(getUsers).post(createUser);
 
-router.route('/:userId').get(getSingleUsers);
-router.route('/:userId').put(updateUsers);
-router.route('/:userId').delete(deleteUsers);
+router.route('/:userId').get(getSingleUser);
+router.route('/:userId').put(updateUser);
+router.route('/:userId').delete(deleteUser);
 
 router.route('/:userId/friends/:friendId').post(addFriend);
 router.route('/:userId/friends/:friendId').delete(deleteFriend);
