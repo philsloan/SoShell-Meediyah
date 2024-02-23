@@ -21,10 +21,10 @@
 const router = require('express').Router();
 const {
     getUsers,
-    getSingleUsers,
-    createUsers,
-    updateUsers,
-    deleteUsers,
+    getSingleUser,
+    createUser,
+    updateUser,
+    deleteUser,
     addFriend,
     deleteFriend
 } = require("../../controllers/user-controller.js");
