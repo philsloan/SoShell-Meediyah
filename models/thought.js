@@ -15,7 +15,7 @@
 //Create a virtual called reactionCount that retrives the lenth 
 // of the thoughts reactions array field on query
 
-const { Schema, Types } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const formatDate = require('../utils/format.js'); // REMEMBER THIS <<<<<<<<<<< 
 const Reaction = require('./reactions.js'); // AND THIS <<<<<<<<
 

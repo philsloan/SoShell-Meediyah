@@ -16,7 +16,7 @@
 // Schema Setting 
     //Creat a vitrtual called FriendCount that retrieves the length of the users friends array fiels on query
 
-const { Schema, Types } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
     username: {
