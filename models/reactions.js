@@ -18,7 +18,7 @@
     //schema in the thought model
 
     const { Schema, Types } = require('mongoose');
-
+    const formatDate = require('../utils/format.js')
     const reactionSchema = new Schema(
       {
         reactionId: {
@@ -37,6 +37,7 @@
         createdAt: {
           type: Date,
           default: Date.now,
+          get: (date) => formatDate(date)
         },
       },
       {
