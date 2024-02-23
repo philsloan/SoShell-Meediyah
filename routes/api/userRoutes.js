@@ -18,3 +18,25 @@
         // POST to add a new friend to a user's friend list
 
         // DELETE to remove a friend from a user's friend list  
+const router = require('express').Router();
+const {
+    getUsers,
+    getSingleUsers,
+    createUsers,
+    updateUsers,
+    deleteUsers,
+    addFriend,
+    deleteFriend
+} = require("../../controllers/user-controller.js");
+
+router.route('/').get(getUsers).post(createUsers);
+
+router.route('/:userId').get(getSingleUsers);
+router.route('/:userId').put(updateUsers);
+router.route('/:userId').delete(deleteUsers);
+
+router.route('/:userId/friends/:friendId').post(addFriend);
+router.route('/:userId/friends/:friendId').delete(deleteFriend);
+
+
+module.exports = router;
